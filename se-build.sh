@@ -7,8 +7,8 @@ cd SoftEtherVPN
 git submodule update --init --recursive
 git pull || exit $?
 
-yum -y install cmake3 readline-devel ncurses-devel openssl-devel
-sed -i.bak 's/cmake/cmake3/g' configure
+yum -y install cmake readline-devel ncurses-devel openssl-devel
+#sed -i.bak 's/cmake/cmake3/g' configure
 ./configure
 cd tmp
 make || exit $?
