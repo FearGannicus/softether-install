@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Script for first-time install of SoftEther VPN on CentOS 7"
 yum -y group install "Development Tools"
-yum -y install wget curl git nano firewalld centos-release-scl
+yum -y install wget curl git nano epel-release centos-release-scl 
 yum -y install devtoolset-7-gcc* devtoolset-7-binutils
 ZONE=$(firewall-cmd --get-default-zone)
 firewall-cmd --zone=$ZONE --add-service=openvpn --permanent
